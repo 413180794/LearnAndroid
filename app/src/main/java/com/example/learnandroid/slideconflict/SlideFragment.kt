@@ -82,9 +82,13 @@ class SlideFragment : Fragment() {
             bookList.add(book)
         }
         val bookAdapter = BookAdapter(bookList.toTypedArray())
-        binding.recyclerView.apply {
+        binding.listView.apply {
             adapter = ArrayAdapter (requireContext(), android.R.layout.simple_list_item_1, bookList)
 
+        }
+        binding.recyclerView.apply {
+            layoutManager = androidx.recyclerview.widget.LinearLayoutManager(requireContext())
+            adapter = bookAdapter
         }
     }
     override fun onDestroyView() {

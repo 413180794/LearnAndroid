@@ -23,9 +23,11 @@ class MyScollView @JvmOverloads constructor(
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
         // 子view控制父亲是否拦截事件，所以这里除了down事件，都认为拦截掉。
         // 这样，如果孩子不处理，move事件是不可能传递到孩子
-        Log.d(TAG, "onInterceptTouchEvent: ${ev?.action}")
 
-        return super.onInterceptTouchEvent(ev)
+
+        val intercept = super.onInterceptTouchEvent(ev)
+        Log.d(TAG, "onInterceptTouchEvent: ${ev?.action} $intercept")
+        return intercept
     }
 
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
