@@ -3,12 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SlideFragment">
+    tools:context=".slideconflict.SlideFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+   <com.example.learnandroid.slideconflict.MyScollView
+       android:id="@+id/scroll_view"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <LinearLayout
+           android:id="@+id/scroll_view_layout"
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <TextView
+               android:id="@+id/text_view_head"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+           <com.example.learnandroid.slideconflict.MyListView
+               android:id="@+id/recycler_view"
+               android:layout_width="match_parent"
+               android:layout_height="500dp"/>
+           <TextView
+                android:id="@+id/text_view_foot"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+       </LinearLayout>
+
+   </com.example.learnandroid.slideconflict.MyScollView>
 
 </FrameLayout>

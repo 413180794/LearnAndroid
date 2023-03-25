@@ -35,6 +35,9 @@ class FirstFragment : Fragment() {
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
+        binding.slideConfict.setOnClickListener{
+            findNavController().navigate(R.id.action_FirstFragment_to_slideFragment)
+        }
     }
 
     override fun onDestroyView() {

@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/SlideFragment"
-        android:name="com.example.learnandroid.SlideFragment"
+        android:name="com.example.learnandroid.slideconflict.SlideFragment"
         android:label="slideFragment"
         tools:layout="@layout/fragment_slide">
         <action
