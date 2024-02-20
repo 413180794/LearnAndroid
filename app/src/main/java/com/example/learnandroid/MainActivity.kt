@@ -1,6 +1,9 @@
 package com.example.learnandroid
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.util.Log
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -10,6 +13,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import com.example.learnandroid.databinding.ActivityMainBinding
+import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,8 +23,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        
+
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        thread {
+            binding.tttt.text = "${Thread.currentThread().name}"
+        }
 
         setSupportActionBar(binding.toolbar)
 
@@ -31,6 +41,9 @@ class MainActivity : AppCompatActivity() {
         binding.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
+        }
+        Handler(Looper.getMainLooper()).post {
+            Log.d("zhang-debug", "${binding.tttt.measuredHeight}")
         }
     }
 

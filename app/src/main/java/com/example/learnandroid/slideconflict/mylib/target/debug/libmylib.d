@@ -1,0 +1,1 @@
+/Users/bytedance/AndroidStudioProjects/LearnAndroid/app/src/main/java/com/example/learnandroid/slideconflict/mylib/target/debug/libmylib.dylib: /Users/bytedance/AndroidStudioProjects/LearnAndroid/app/src/main/java/com/example/learnandroid/slideconflict/mylib/src/lib.rs

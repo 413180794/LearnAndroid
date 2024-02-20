@@ -1,38 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".FirstFragment">
-
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        android:text="@string/next" />
 
     <Button
         android:id="@+id/slide_confict"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="滑动冲突"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_first" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="滑动冲突" />
+
+    <Button
+        android:id="@+id/learn_view_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学习viewpager" />
+    <Button
+        android:id="@+id/learn_recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学习RecyclerView" />
+    <Button
+        android:id="@+id/learn_drawable_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学习drawable" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="正在疯狂拉取中..."
+        android:textSize="15dp"
+        android:id="@+id/tv_loading"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_gravity="center"
+        android:text="正在疯狂拉取中..."
+        android:id="@+id/tv_loading2"/>
+
+</LinearLayout>

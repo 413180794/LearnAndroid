@@ -5,33 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".slideconflict.SlideFragment">
 
-   <com.example.learnandroid.slideconflict.MyScollView
-       android:id="@+id/scroll_view"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
        <LinearLayout
            android:id="@+id/scroll_view_layout"
            android:orientation="vertical"
            android:layout_width="match_parent"
            android:layout_height="wrap_content">
-           <TextView
-               android:id="@+id/text_view_head"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"/>
-           <com.example.learnandroid.slideconflict.MyListView
-               android:id="@+id/list_view"
-               android:layout_width="match_parent"
-               android:layout_height="500dp"/>
+
            <com.example.learnandroid.slideconflict.MyRecyclerView
                android:id="@+id/recycler_view"
                android:layout_width="match_parent"
-               android:layout_height="500dp"/>
-           <TextView
-                android:id="@+id/text_view_foot"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"/>
-       </LinearLayout>
+               android:layout_height="match_parent"/>
 
-   </com.example.learnandroid.slideconflict.MyScollView>
+       </LinearLayout>
 
 </FrameLayout>

@@ -16,7 +16,16 @@
             app:destination="@id/SecondFragment" />
         <action
             android:id="@+id/action_FirstFragment_to_slideFragment"
-            app:destination="@+id/SlideFragment"/>
+            app:destination="@+id/SlideFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_viewPagerFragment"
+            app:destination="@+id/view_pager_fragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_RecyclerViewFragment"
+            app:destination="@+id/recycler_view_fragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_LearnDrawableFragment"
+            app:destination="@+id/learn_drawable_fragment" />
     </fragment>
 
     <fragment
@@ -26,17 +35,44 @@
         tools:layout="@layout/fragment_slide">
         <action
             android:id="@+id/action_SlideFragment_to_FirstFragment"
-            app:destination="@+id/FirstFragment"/>
+            app:destination="@+id/FirstFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/view_pager_fragment"
+        android:name="com.example.learnandroid.learnviewpager.ViewPagerFragment"
+        android:label="viewPagerFragment"
+        tools:layout="@layout/fragment_view_pager">
+        <action
+            android:id="@+id/action_SlideFragment_to_FirstFragment"
+            app:destination="@+id/FirstFragment" />
+    </fragment>
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.learnandroid.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
-
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/recycler_view_fragment"
+        android:name="com.example.learnandroid.learnrecyclerview.RecyclerViewFragment"
+        android:label="recyclerViewFragment"
+        tools:layout="@layout/fragment_recycler_view">
+        <action
+            android:id="@+id/action_RecyclerViewFragment_to_FirstFragment"
+            app:destination="@+id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/learn_drawable_fragment"
+        android:name="com.example.learnandroid.learnDrawable.LearnDrawableFragment"
+        android:label="LearnDrawableFragment"
+        tools:layout="@layout/fragment_learn_drawable">
+        <action
+            android:id="@+id/action_LearnDrawableFragment_to_FirstFragment"
+            app:destination="@+id/FirstFragment" />
+    </fragment>
+
 </navigation>
